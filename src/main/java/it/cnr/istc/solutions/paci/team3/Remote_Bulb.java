@@ -9,21 +9,27 @@ package it.cnr.istc.solutions.paci.team3;
  *
  * @author Alessio
  */
-public class Remote_Bulb extends Sensor{
-    
+public class Remote_Bulb extends Sensor {
+
     private int colori[] = new int[3];
 
-    public Remote_Bulb(int id, String nome, boolean stato, Location luogo,int[] c) {
+    public Remote_Bulb(int id, String nome, boolean stato, Location luogo, int[] c) {
         super(id, nome, stato, luogo);
         this.colori = c;
+    }
+
+    public void Change_Color(int[] c) {
+        for (int i = 0; i < 3; i++) {
+            this.colori[i] = c[i];
+        }
     }
 
     public void setStato(boolean stato) {
         this.stato = stato;
     }
-    
-    public boolean isValidColor(int[] c){
+
+    public boolean isValidColor(int[] c) {
         return false;
     }
-    
+
 }

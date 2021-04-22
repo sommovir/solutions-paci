@@ -30,6 +30,7 @@ public class DoorLock extends Sensor{
         }
     }
     
+    
     @Override
     public String getId() {
         return "B";

@@ -31,9 +31,29 @@ public class SensorManager {
     }
     
     public List<Sensor> getLowerTo20(){
+        List<Sensor> lowerTo20List = new LinkedList<Sensor>();
+        
         for (Sensor sensor : sensorList) {
-            
+            if(sensor.getBatteryLevel() < 20){
+                lowerTo20List.add(sensor);
+            }
         }
+        
+        return lowerTo20List;
     }
+    
+    public boolean checkLock(){
+        for (Sensor sensor : sensorList) {
+            if(sensor instanceof DoorLock){
+                if(((DoorLock)sensor).isContact().equals("unlock")){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    
+    
+    
     
 }

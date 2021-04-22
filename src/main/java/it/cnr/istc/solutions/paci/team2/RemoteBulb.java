@@ -10,6 +10,10 @@ package it.cnr.istc.solutions.paci.team2;
  * @author Simone
  */
 public class RemoteBulb extends Sensor{
+
+    public RemoteBulb(String name, String id, float batteryLevel, boolean on) {
+        super(name, id, batteryLevel, on);
+    }
     
     public void switchOn() {
         on = true;

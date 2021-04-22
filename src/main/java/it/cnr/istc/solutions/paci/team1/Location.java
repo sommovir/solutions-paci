@@ -11,6 +11,12 @@ package it.cnr.istc.solutions.paci.team1;
  */
 public enum Location {
     
+    Salotto,
+    Camera,
+    Cameretta,
+    Cucina,
+    Bagno;
+    
     
     
 }

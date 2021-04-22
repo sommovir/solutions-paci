@@ -59,7 +59,7 @@ public class SensorManager {
     
     public void nightMode(boolean status){
         for (Sensor sensor : sensorList) {
-            if(sensor instanceof RemoteBulb || sensor instanceof RemoteAdvancedBulb){
+            if(sensor instanceof RemoteBulb){
                 if(status == true){
                     ((RemoteBulb) sensor).switchOff();
                 }
@@ -67,8 +67,32 @@ public class SensorManager {
         }
     }
     
-    public void setPlugStatus(String id, boolean Stauts){
-        
+    public void goodMorning(){
+        for (Sensor sensor : sensorList) {
+            if(sensor instanceof RemoteBulb){
+                ((RemoteBulb) sensor).switchOn();
+            }
+        }
+    }
+    
+    public void redAlarm(){
+        for (Sensor sensor : sensorList) {
+            if(sensor instanceof RemoteAdvancedBulb){
+                ((RemoteAdvancedBulb)sensor).setRgb("FF0000");
+            }            
+        }
+    }
+    
+    public void setPlugStatus(String id, boolean status){
+        for (Sensor sensor : sensorList) {
+            if(sensor.getIdentificationCode().equals(id)){
+                if(status == true){
+                    ((PowerPlug)sensor).switchOn();
+                } else {
+                    ((PowerPlug)sensor).switchOff();
+                }
+            }
+        }
     }
     
     

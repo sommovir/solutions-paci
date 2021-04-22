@@ -11,9 +11,11 @@ package it.cnr.istc.solutions.paci.team3;
  */
 public class Pir extends Sensor {
 
-    public Pir(int id, String nome, boolean stato, Location luogo) {
-        super(id, nome, stato, luogo);
+    public Pir(int id, int livello_batteria, String nome, boolean stato, Location luogo) {
+        super(id, livello_batteria, nome, stato, luogo);
     }
+
+   
 
     public boolean isRileva(boolean m){
         if(m == true){

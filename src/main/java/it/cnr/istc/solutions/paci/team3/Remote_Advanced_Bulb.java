@@ -11,9 +11,11 @@ package it.cnr.istc.solutions.paci.team3;
  */
 public class Remote_Advanced_Bulb extends Sensor{
 
-    public Remote_Advanced_Bulb(int id, String nome, boolean stato, Location luogo) {
-        super(id, nome, stato, luogo);
+    public Remote_Advanced_Bulb(int id, int livello_batteria, String nome, boolean stato, Location luogo) {
+        super(id, livello_batteria, nome, stato, luogo);
     }
+
+  
 
    
     

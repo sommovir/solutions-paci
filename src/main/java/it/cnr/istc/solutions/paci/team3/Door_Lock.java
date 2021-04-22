@@ -11,9 +11,11 @@ package it.cnr.istc.solutions.paci.team3;
  */
 public class Door_Lock extends Sensor {
 
-    public Door_Lock(int id, String nome, boolean stato, Location luogo) {
-        super(id, nome, stato, luogo);
+    public Door_Lock(int id, int livello_batteria, String nome, boolean stato, Location luogo) {
+        super(id, livello_batteria, nome, stato, luogo);
     }
+
+    
     
     public void Rileva_Contatto(boolean c){
         if(c){

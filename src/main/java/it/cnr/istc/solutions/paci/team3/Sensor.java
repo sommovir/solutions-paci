@@ -11,18 +11,20 @@ package it.cnr.istc.solutions.paci.team3;
  */
 public class Sensor {
     
-    protected int id;
+    protected int id,livello_batteria;
     protected String nome;
     protected boolean stato;
     protected Location luogo;
 
-    public Sensor(int id, String nome, boolean stato, Location luogo) {
+    public Sensor(int id, int livello_batteria, String nome, boolean stato, Location luogo) {
         this.id = id;
+        this.livello_batteria = livello_batteria;
         this.nome = nome;
         this.stato = stato;
         this.luogo = luogo;
     }
     
+
     
     
     

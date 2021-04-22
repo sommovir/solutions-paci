@@ -13,10 +13,11 @@ public class Power_Plug extends Sensor{
     
     private float consumo;
 
-    public Power_Plug(int batteria, int id, String nome, boolean stato, Location luogo) {
-        super(id, nome, stato, luogo);
-        this.consumo = batteria;
+    public Power_Plug(float consumo, int id, int livello_batteria, String nome, boolean stato, Location luogo) {
+        super(id, livello_batteria, nome, stato, luogo);
+        this.consumo = consumo;
     }
+
 
     public void setStato(boolean stato) {
         this.stato = stato;

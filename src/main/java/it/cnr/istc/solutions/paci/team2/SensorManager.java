@@ -15,6 +15,10 @@ import java.util.List;
 public class SensorManager {
     List<Sensor> sensorList = new LinkedList<Sensor>();
     
+    /**
+     * Metodo che conta il numero  di sensori correttamente installati
+     * @return numero sensori correttamente installati
+     */
     public int getListSensors(){
         int amount=0;
         for (Sensor sensor : sensorList) {
@@ -53,7 +57,19 @@ public class SensorManager {
         return true;
     }
     
+    public void nightMode(boolean status){
+        for (Sensor sensor : sensorList) {
+            if(sensor instanceof RemoteBulb || sensor instanceof RemoteAdvancedBulb){
+                if(status == true){
+                    ((RemoteBulb) sensor).switchOff();
+                }
+            }
+        }
+    }
     
+    public void setPlugStatus(String id, boolean Stauts){
+        
+    }
     
     
 }

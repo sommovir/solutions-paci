@@ -9,10 +9,17 @@ package it.cnr.istc.solutions.paci.team3;
  *
  * @author Alessio
  */
-public class Pir extends SensorManager {
+public class Pir extends Sensor {
 
-    public Pir(int id) {
-        super(id);
+    public Pir(int id, String nome, boolean stato, Location luogo) {
+        super(id, nome, stato, luogo);
+    }
+
+    public boolean Rileva(boolean m){
+        if(m == true){
+            return true;
+        }
+        return false;
     }
   
 }

@@ -12,7 +12,7 @@ package it.cnr.istc.solutions.paci.team3;
 public class Main {
     
     public static void main(String[] args) {
-        System.out.println("Solution Project");
+        boolean movimento,contatto;
     }
     
 }

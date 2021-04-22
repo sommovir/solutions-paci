@@ -9,10 +9,17 @@ package it.cnr.istc.solutions.paci.team3;
  *
  * @author Alessio
  */
-public class Door_Lock extends SensorManager {
+public class Door_Lock extends Sensor {
 
-    public Door_Lock(int id) {
-        super(id);
+    public Door_Lock(int id, String nome, boolean stato, Location luogo) {
+        super(id, nome, stato, luogo);
+    }
+    
+    public boolean Rileva_contatto(boolean c){
+        if(c){
+            return true;
+        }
+        return false;
     }
     
 }

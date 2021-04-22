@@ -9,11 +9,12 @@ package it.cnr.istc.solutions.paci.team3;
  *
  * @author Alessio
  */
-public class Remote_Bulb extends Sensor{
-
-    public Remote_Bulb(int id, String nome, boolean stato, Location luogo) {
-        super(id, nome, stato, luogo);
-    }
-
+public enum Location {
+    
+    CAMERA_DA_LETTO,
+    BAGNO,
+    SOGGIORNO,
+    TERRAZZO,
+    INGRESSO,
     
 }

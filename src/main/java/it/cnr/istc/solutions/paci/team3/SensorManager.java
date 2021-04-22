@@ -9,11 +9,6 @@ package it.cnr.istc.solutions.paci.team3;
  *
  * @author Alessio
  */
-public abstract class SensorManager {
-    
-    protected int id;
-    
-    public SensorManager(int id){
-        this.id = id;
-    }
+public class SensorManager {
+    //Lista dati dei sensori
 }

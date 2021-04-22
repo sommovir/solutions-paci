@@ -11,7 +11,7 @@ package it.cnr.istc.solutions.paci.team3;
  */
 public class Remote_Advanced_Bulb extends Remote_Bulb{
     
-private int colori[] = new int[3];
+    private int colori[] = new int[3];
 
     public Remote_Advanced_Bulb(int id, int livello_batteria, String nome, boolean stato, Location luogo) {
         super(id, livello_batteria, nome, stato, luogo);

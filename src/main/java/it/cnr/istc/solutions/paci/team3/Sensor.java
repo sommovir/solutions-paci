@@ -23,9 +23,5 @@ public class Sensor {
         this.stato = stato;
         this.luogo = luogo;
     }
-    
-
-    
-    
-    
+   
 }

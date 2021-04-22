@@ -16,7 +16,6 @@ public class Remote_Bulb extends Sensor {
     public Remote_Bulb(int id, int livello_batteria, String nome, boolean stato, Location luogo) {
         super(id, livello_batteria, nome, stato, luogo);
     }
-
     
     public void Change_Color(int[] c) {
         for (int i = 0; i < 3; i++) {

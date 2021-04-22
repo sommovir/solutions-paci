@@ -15,11 +15,11 @@ public class Door_Lock extends Sensor {
         super(id, nome, stato, luogo);
     }
     
-    public boolean Rileva_contatto(boolean c){
+    public void Rileva_Contatto(boolean c){
         if(c){
-            return true;
+            System.out.println("Unlock");
         }
-        return false;
+        System.out.println("Lock");
     }
     
 }

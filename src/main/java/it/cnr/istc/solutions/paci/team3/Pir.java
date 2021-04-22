@@ -15,7 +15,7 @@ public class Pir extends Sensor {
         super(id, nome, stato, luogo);
     }
 
-    public boolean Rileva(boolean m){
+    public boolean isRileva(boolean m){
         if(m == true){
             return true;
         }

@@ -10,12 +10,20 @@ package it.cnr.istc.solutions.paci.team3;
  * @author Alessio
  */
 public class Power_Plug extends Sensor{
+    
+    private float consumo;
 
-    public Power_Plug(int id, String nome, boolean stato, Location luogo) {
+    public Power_Plug(int batteria, int id, String nome, boolean stato, Location luogo) {
         super(id, nome, stato, luogo);
+        this.consumo = batteria;
     }
 
-    
-    
+    public void setStato(boolean stato) {
+        this.stato = stato;
+    }
+
+    public float getConsumo() {
+        return consumo;
+    }
     
 }

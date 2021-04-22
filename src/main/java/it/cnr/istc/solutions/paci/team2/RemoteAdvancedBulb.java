@@ -9,11 +9,8 @@ package it.cnr.istc.solutions.paci.team2;
  *
  * @author Simone
  */
-public class RemoteAdvancedBulb extends Sensor{
+public class RemoteAdvancedBulb extends RemoteBulb{
     private String rgb;
-
-    public RemoteAdvancedBulb() {
-    }
 
     public RemoteAdvancedBulb(String rgb, String name, String id, float batteryLevel, boolean on) {
         super(name, id, batteryLevel, on);
@@ -27,18 +24,12 @@ public class RemoteAdvancedBulb extends Sensor{
     public void setRgb(String rgb) {
         this.rgb = rgb;
     }
-    
-    public void switchOn() {
-        on = true;
-    }
-    public void switchOff() {
-        on = false;
-    }
 
     @Override
     public String getId() {
        return "E";
     }
     
+
 
 }

@@ -9,10 +9,10 @@ package it.cnr.istc.solutions.paci.team3;
  *
  * @author Alessio
  */
-public class Main {
-    
-    public static void main(String[] args) {
-        System.out.println("Solution Project");
+public class Door_Lock extends SensorManager {
+
+    public Door_Lock(int id) {
+        super(id);
     }
     
 }

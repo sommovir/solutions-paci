@@ -9,10 +9,10 @@ package it.cnr.istc.solutions.paci.team3;
  *
  * @author Alessio
  */
-public class Main {
-    
-    public static void main(String[] args) {
-        System.out.println("Solution Project");
-    }
+public class Remote_Advanced_Bulb extends SensorManager{
+
+    public Remote_Advanced_Bulb(int id) {
+        super(id);
+    } 
     
 }

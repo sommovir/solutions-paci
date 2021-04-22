@@ -17,6 +17,17 @@ public abstract class Sensore {
     private boolean powerStatus; // On/OFF
     
     public Sensore(){}
+    public Sensore(int id, float batteryLevel, Location location, boolean powerStatus){
+        
+        this.id = id;
+        this.batteryLevel = batteryLevel;
+        this.location = location;
+        this.powerStatus = powerStatus;
+        
+    }
+    
+    
+    /* -------------------------------------------- */
     
     public int getID(){
     

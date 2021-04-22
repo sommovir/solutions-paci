@@ -11,10 +11,10 @@ package it.cnr.istc.solutions.paci.team1;
  */
 public abstract class Sensore {
     
-    private int id;
-    private float batteryLevel;
-    private Location location;
-    private boolean powerStatus; // On/OFF
+    protected int id;
+    protected float batteryLevel;
+    protected Location location;
+    protected boolean powerStatus; // On/OFF
     
     public Sensore(){}
     public Sensore(int id, float batteryLevel, Location location, boolean powerStatus){

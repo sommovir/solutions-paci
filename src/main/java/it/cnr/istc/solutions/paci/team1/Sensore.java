@@ -11,4 +11,11 @@ package it.cnr.istc.solutions.paci.team1;
  */
 public class Sensore {
     
+    private String id;
+    private float batteryLevel;
+    private boolean powerStatus;
+    
+    
+    
+    
 }

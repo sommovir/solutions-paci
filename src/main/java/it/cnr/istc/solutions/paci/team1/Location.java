@@ -7,8 +7,10 @@ package it.cnr.istc.solutions.paci.team1;
 
 /**
  *
- * @author Alessio
+ * @author d1390
  */
-public class Prova {
+public enum Location {
+    
+    
     
 }

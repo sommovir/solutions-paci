@@ -9,32 +9,29 @@ package it.cnr.istc.solutions.paci.team2;
  *
  * @author Simone
  */
-public class Pir extends Sensor{
+public class DoorLock extends Sensor{
     
-    private boolean movmentCheck = false;
+    private boolean contact;
 
-    public Pir() {
+    public DoorLock() {
     }
-
-    public Pir(String name, String id, float batteryLevel, boolean on) {
+    
+    public DoorLock(boolean contact, String name, String id, float batteryLevel, boolean on) {
         super(name, id, batteryLevel, on);
+        this.contact = contact;
     }
     
-    
-    
-    public void isMovmentCheck(){
-        if(!movmentCheck){
-            movmentCheck = true;
+    public String isContact() {
+        if(contact){
+            return "lock";
         }
         else{
-            movmentCheck = false;
+            return "unlock";
         }
-                
     }
     
-    
     @Override
-    public String getId(){
-        return "A";
+    public String getId() {
+        return "B";
     }
 }

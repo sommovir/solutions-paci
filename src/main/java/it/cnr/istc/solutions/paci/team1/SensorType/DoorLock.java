@@ -13,4 +13,38 @@ import it.cnr.istc.solutions.paci.team1.Sensore;
  */
 public class DoorLock extends Sensore {
     
+    private boolean contact;    //false non contatto true contatto.
+    private String message;
+    
+    public DoorLock (boolean c,String m,boolean contact,String message,int  id, float batteryLevel, boolean powerStatus){
+    
+        super(id, batteryLevel, powerStatus);
+     
+        this.contact = c;
+        this.message = m;
+                
+    
+    }
+    
+    
+    public String status () {
+    
+    if(contact == false){
+    
+        message = "unlock";
+        
+    }
+    
+    else{
+    
+        message = "lock";
+    
+    }
+    
+    return message;
+    
+    }
+    
+    
+    
 }

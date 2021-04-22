@@ -5,10 +5,27 @@
  */
 package it.cnr.istc.solutions.paci.team3;
 
-/**
+/** * and open the template in the editor.
  *
  * @author Alessio
  */
 public class SensorManager {
-    //Lista dati dei sensori
+    
+    public static void nightMode(boolean stato){
+        
+    }
+    
+    public static void goodMorning(){
+        
+    }
+    
+    public static void red_alarm(){
+        
+    }
+    
+    public static void setPowerPlugById(int id){
+        
+    }
+            
+    
 }

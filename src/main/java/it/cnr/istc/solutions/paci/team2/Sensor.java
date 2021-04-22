@@ -32,9 +32,30 @@ public abstract class Sensor {
         this.batteryLevel = batteryLevel;
         this.on = on;
     }
-    
-    
-    
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public float getBatteryLevel() {
+        return batteryLevel;
+    }
+
+    public void setBatteryLevel(float batteryLevel) {
+        this.batteryLevel = batteryLevel;
+    }
+
+    public boolean isOn() {
+        return on;
+    }
+
+    public void setOn(boolean on) {
+        this.on = on;
+    }
 
     public abstract String getId();
     

@@ -9,7 +9,7 @@ package it.cnr.istc.solutions.paci.team3;
  *
  * @author Alessio
  */
-public class Sensor {
+public abstract class Sensor {
     
     protected int id,livello_batteria;
     protected String nome;

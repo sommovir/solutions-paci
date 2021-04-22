@@ -23,6 +23,11 @@ public class Remote_Bulb extends Sensor{
     }
     
     public boolean isValidColor(int[] c){
+        for (int i = 0; i < 3; i++) {
+            if(c[i]>=0 && c[i]<=255){
+                return true;
+            }
+        }
         return false;
     }
     

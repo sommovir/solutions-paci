@@ -15,9 +15,8 @@ import java.util.List;
  */
 public class SensorManager {
 
-    List<Sensor> listaSensori = new LinkedList<>();
-    List<Sensor> listaSensoriConnessi = new LinkedList<>();
-    
+    static List<Sensor> listaSensori = new LinkedList<>();
+    static List<Sensor> listaSensoriConnessi = new LinkedList<>();
 
     public static void nightMode(boolean stato) {
 
@@ -40,18 +39,11 @@ public class SensorManager {
      *
      * Riporta il numero dei sensori correttamente installati
      *
-     * @param s
-     * @param Sensori
      * @return n_sensori
      */
-    public static int getActiveSensorNumber(Sensor s, List<Sensor> Sensori) {
-        int n_sensori=0;
-        if (s.stato == true) {
-            Sensori.add(s);
-            n_sensori += +1;
-        }
+    public static int getActiveSensorNumber() {
 
-        return n_sensori;
+        return listaSensori.size();
     }
 
     /**
@@ -60,11 +52,11 @@ public class SensorManager {
      * @param s
      * @param Sensori
      */
-    public static void addSensor(Sensor s, List<Sensor> Sensori, List<Sensor> listaAccesi) {
-        for (Sensor sensor : Sensori) {
+    public static void addSensor(Sensor s) {
+        for (Sensor sensor : listaSensori) {
             if(sensor.stato==true)
             {
-                listaAccesi.add(sensor);
+                listaSensoriConnessi.add(sensor);
             }
         }
 
@@ -75,10 +67,10 @@ public class SensorManager {
      *
      * @return 
      */
-    public static List<Sensor> listSensorBatteryLow(List<Sensor> Sensori) {
-        List<Sensor> listaBatterylow = new LinkedList<>();
+    public static List<Sensor> listSensorBatteryLow() {
+    List<Sensor> listaBatterylow = new LinkedList<>();
 
-        for (Sensor sensor : Sensori) {
+        for (Sensor sensor : listaSensori) {
             if (sensor.livello_batteria < 20) {
                 listaBatterylow.add(sensor);
             }
@@ -91,9 +83,11 @@ public class SensorManager {
      *
      * @return
      */
-    public static boolean ischeckLock(Door_Lock d) {
-        if(d.stato==true){
-            return false;
+    public static boolean ischeckLock() {
+        for(Sensor s : listaSensoriConnessi){
+             if(s instanceof Door_Lock){
+                    return false;
+            }
         }
         return true;
     }

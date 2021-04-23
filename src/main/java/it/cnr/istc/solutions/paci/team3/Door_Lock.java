@@ -10,18 +10,19 @@ package it.cnr.istc.solutions.paci.team3;
  * @author Alessio
  */
 public class Door_Lock extends Sensor {
+    
+    private boolean contact;
 
-    public Door_Lock(int id, int livello_batteria, String nome, boolean stato, Location luogo) {
+    public Door_Lock(boolean contact, int id, int livello_batteria, String nome, boolean stato, Location luogo) {
         super(id, livello_batteria, nome, stato, luogo);
+        this.contact = contact;
     }
-
     
-    
-    public void Rileva_Contatto(boolean c){
-        if(c){
-            System.out.println("Unlock");
+    public String Rileva_Contatto(){
+        if(contact){
+            return "Unlock";
         }
-        System.out.println("Lock");
+        return "Lock";
     }
     
 }

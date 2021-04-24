@@ -17,20 +17,49 @@ public class SensorManager {
 
     static List<Sensor> listaSensori = new LinkedList<>();
     static List<Sensor> listaSensoriConnessi = new LinkedList<>();
-
+    
+    
     public static void nightMode(boolean stato) {
+        for(Sensor x : listaSensoriConnessi){
+            if(x.stato == true)//Se accesa
+            {
+               x.stato = false; 
+            }
+        }
 
     }
 
     public static void goodMorning() {
-
+        for(Sensor x : listaSensoriConnessi){
+            if(x instanceof Remote_Bulb || x instanceof Remote_Advanced_Bulb || x.luogo.equals("CAMERA_DA_LETTO"))//Se accesa
+            {
+               x.stato = true; 
+            }
+        }
     }
 
     public static void red_alarm() {
+        int y[] = new int[3];
+        y[0] = 255;
+        y[1] = 0;
+        y[2] = 0;
+        for(Sensor x : listaSensoriConnessi){
+            if(x instanceof Remote_Advanced_Bulb)
+            {
+               ((Remote_Advanced_Bulb) x).Change_Color(y); 
+            }
+        }
+        
 
     }
 
-    public static void setPowerPlugById(int id) {
+    public static void setPowerPlugById(int id,boolean s) {
+        for(Sensor x : listaSensori){
+            if(x.id == id)
+            {
+               x.stato = s; 
+            }
+        }
 
     }
 

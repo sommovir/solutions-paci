@@ -22,12 +22,12 @@ public class Pir extends Sensor{
     
     
     
-    public void isMovmentCheck(){
+    public boolean isMovmentCheck(){
         if(!movmentCheck){
-            movmentCheck = true;
+            return true;
         }
         else{
-            movmentCheck = false;
+            return false;
         }
                 
     }

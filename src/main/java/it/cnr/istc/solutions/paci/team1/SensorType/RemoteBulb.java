@@ -5,6 +5,7 @@
  */
 package it.cnr.istc.solutions.paci.team1.SensorType;
 
+import it.cnr.istc.solutions.paci.team1.Location;
 import it.cnr.istc.solutions.paci.team1.Sensore;
 
 /**
@@ -12,5 +13,17 @@ import it.cnr.istc.solutions.paci.team1.Sensore;
  * @author d1390
  */
 public class RemoteBulb extends Sensore{
+    
+    public RemoteBulb (int  id, Location location, float batteryLevel, boolean powerStatus){
+    
+        super(id, batteryLevel, location, powerStatus);
+                
+    }    
+    
+    public void SetPower(boolean Pswitch){
+    
+        this.powerStatus = Pswitch;
+    
+    }
     
 }

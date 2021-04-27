@@ -35,6 +35,10 @@ public class SensorManager {
         return sensorList.size();
     }
     
+    /**
+     * Aggiunge un sensore alla rete di sensori
+     * @param sensor 
+     */
     public void addSensor(Sensor sensor){
         if(sensor == null){
             return;

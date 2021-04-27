@@ -16,7 +16,7 @@ public class PowerPlug extends Sensore{
     
     private float corrente;
     
-    public PowerPlug (int  id, Location location, float batteryLevel, boolean powerStatus){
+    public PowerPlug (int  id, Location location, float batteryLevel, boolean powerStatus, float corrente){
     
         super(id, batteryLevel, location, powerStatus);
         this.corrente = corrente;

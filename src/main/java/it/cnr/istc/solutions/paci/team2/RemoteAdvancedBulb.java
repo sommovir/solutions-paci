@@ -22,7 +22,10 @@ public class RemoteAdvancedBulb extends RemoteBulb{
     }
 
     public void setRgb(String rgb) {
-        this.rgb = rgb;
+        if(rgb.matches("\\b([A-F]|[0-9]){6}\\b")){
+            this.rgb = rgb;
+        }
+        return;
     }
 
     @Override

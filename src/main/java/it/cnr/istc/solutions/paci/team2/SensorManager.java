@@ -20,11 +20,7 @@ public class SensorManager {
      * @return numero sensori correttamente installati
      */
     public int getListSensors(){
-        int amount=0;
-        for (Sensor sensor : sensorList) {
-            amount++;
-        }
-        return amount;
+        return sensorList.size();
     }
     
     public void addSensor(Sensor sensor){

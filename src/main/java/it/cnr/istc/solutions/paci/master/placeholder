@@ -1,6 +1,7 @@
 
 
 
+
 Un azienda di domotica vuole implementare un tool per il controllo di numerosi 
 sensori e permettere all'utente tramite una GUI, di avere informazioni in tempo
 reale e per qualche sensore anche la possibilità di essere acceso o spento da 

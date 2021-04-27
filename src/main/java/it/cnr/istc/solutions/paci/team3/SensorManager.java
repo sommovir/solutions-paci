@@ -31,7 +31,7 @@ public class SensorManager {
 
     public static void goodMorning() {
         for(Sensor x : listaSensoriConnessi){
-            if(x instanceof Remote_Bulb || x instanceof Remote_Advanced_Bulb || x.luogo.equals("CAMERA_DA_LETTO"))//Se accesa
+            if((x instanceof Remote_Bulb || x instanceof Remote_Advanced_Bulb) && x.luogo.equals("CAMERA_DA_LETTO"))//Se accesa
             {
                x.stato = true; 
             }

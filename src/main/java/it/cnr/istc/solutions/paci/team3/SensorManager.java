@@ -54,6 +54,7 @@ public class SensorManager {
     }
 
     public static void setPowerPlugById(int id,boolean s) {
+        
         for(Sensor x : listaSensori){
             if(x.id == id)
             {
@@ -82,6 +83,10 @@ public class SensorManager {
      * @param Sensori
      */
     public static void addSensor(Sensor s) {
+        if(s==null || s.nome.isEmpty() || s.luogo==null || s.livello_batteria<0)
+        {
+            return;
+        }
         for (Sensor sensor : listaSensori) {
             if(sensor.stato==true)
             {

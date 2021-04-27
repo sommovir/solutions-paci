@@ -15,6 +15,18 @@ import java.util.List;
 public class SensorManager {
     List<Sensor> sensorList = new LinkedList<Sensor>();
     
+    private static SensorManager _instance = null;
+    
+    public static SensorManager getInstance() {
+        if (_instance == null) {
+            _instance = new SensorManager();
+        }        
+        return _instance;        
+    }
+    
+    private SensorManager() {
+        super();
+    }
     /**
      * Metodo che conta il numero  di sensori correttamente installati
      * @return numero sensori correttamente installati

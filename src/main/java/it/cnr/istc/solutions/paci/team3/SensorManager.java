@@ -19,6 +19,23 @@ public class SensorManager {
     static List<Sensor> listaSensoriConnessi = new LinkedList<>();
     
     
+    private static SensorManager _instance = null;
+    
+    
+    public static SensorManager getInstance() {
+        if (_instance == null) {
+            _instance = new SensorManager();
+            return _instance;
+        } else {
+            return _instance;
+        }
+    }
+    
+    private SensorManager() {
+        super();
+    }
+    
+    
     public static void nightMode(boolean stato) {
         for(Sensor x : listaSensoriConnessi){
             if(x.stato == true)//Se accesa
@@ -54,6 +71,7 @@ public class SensorManager {
     }
 
     public static void setPowerPlugById(int id,boolean s) {
+        
         for(Sensor x : listaSensori){
             if(x.id == id)
             {
@@ -82,6 +100,10 @@ public class SensorManager {
      * @param Sensori
      */
     public static void addSensor(Sensor s) {
+        if(s==null || s.nome.isEmpty() || s.luogo==null || s.livello_batteria<0)
+        {
+            return;
+        }
         for (Sensor sensor : listaSensori) {
             if(sensor.stato==true)
             {

@@ -10,10 +10,10 @@ package it.cnr.istc.solutions.paci.team3;
  * @author Alessio
  */
 public class Main {
-    
+
     public static void main(String[] args) {
-        boolean movimento,contatto;
+        boolean movimento, contatto;
 
     }
-    
+
 }

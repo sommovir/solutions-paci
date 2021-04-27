@@ -19,6 +19,23 @@ public class SensorManager {
     static List<Sensor> listaSensoriConnessi = new LinkedList<>();
     
     
+    private static SensorManager _instance = null;
+    
+    
+    public static SensorManager getInstance() {
+        if (_instance == null) {
+            _instance = new SensorManager();
+            return _instance;
+        } else {
+            return _instance;
+        }
+    }
+    
+    private SensorManager() {
+        super();
+    }
+    
+    
     public static void nightMode(boolean stato) {
         for(Sensor x : listaSensoriConnessi){
             if(x.stato == true)//Se accesa
@@ -31,7 +48,7 @@ public class SensorManager {
 
     public static void goodMorning() {
         for(Sensor x : listaSensoriConnessi){
-            if(x instanceof Remote_Bulb || x instanceof Remote_Advanced_Bulb || x.luogo.equals("CAMERA_DA_LETTO"))//Se accesa
+            if((x instanceof Remote_Bulb || x instanceof Remote_Advanced_Bulb) && x.luogo.equals("CAMERA_DA_LETTO"))//Se accesa
             {
                x.stato = true; 
             }

@@ -20,9 +20,15 @@ public class RemoteBulb extends Sensore{
                 
     }    
     
-    public void SetPower(boolean Pswitch){
+    /**
+     * Viene impostato una variabile "interruttore" (pSwitch) che gestisce l'accensione e lo spegnimento del 
+     * RemoteBulb
+     * 
+     * @param pSwitch 
+     */
+    public void SetPower(boolean pSwitch){
     
-        this.powerStatus = Pswitch;
+        this.powerStatus = pSwitch;
     
     }
     

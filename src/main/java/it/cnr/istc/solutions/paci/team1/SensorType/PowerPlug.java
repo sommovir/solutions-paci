@@ -23,9 +23,9 @@ public class PowerPlug extends Sensore{
                 
     }
     
-    public void SetPower(boolean Pswitch){
+    public void SetPower(boolean pSwitch){
     
-        this.powerStatus = Pswitch;
+        this.powerStatus = pSwitch;
     
     }
     
